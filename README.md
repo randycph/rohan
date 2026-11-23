@@ -1,6 +1,6 @@
 # Rohan local private server setup
 
-This repository contains the XAMPP `htdocs` files (excluding XAMPP's `default` folder and local `.bak` backups), plus a registry template and client launch script. It does **not** contain the game server executables, the full game client, or SQL backup files; keep those in your local licensed installation.
+This repository contains the XAMPP `htdocs` files (excluding XAMPP's `default` folder and local `.bak` backups), the `database-104905` package including its database backup files, plus a registry template and client launch script. It does **not** contain the game server executables or the full game client; keep those in your local licensed installation.
 
 ## SQL Server reference used for this setup
 
@@ -14,14 +14,23 @@ This machine was set up with SQL Server **Developer Edition (64-bit)**, instance
 
 1. Start the Windows 11 VM in Parallels.
 2. Install XAMPP, Microsoft ODBC Driver 17 for SQL Server, and the PHP ODBC extension. After changing `php.ini`, restart Apache.
-3. Keep the complete server package and client files in their own local folders. This repository does not include those executables or assets.
-4. Clone/download this repository. Copy the **contents of its `htdocs` folder** into `C:\xampp\htdocs`, keeping the existing XAMPP `default` folder if you use it.
+3. Keep the complete Rohan server package and client files in their own local folders. This repository does not include those executables or assets.
+4. Clone/download this repository. Copy the **contents of its `htdocs` folder** into `C:\xampp\htdocs`, keeping XAMPP's `default` folder if you use it.
 
-### 2. Set up SQL Server
+### 2. Restore the database backups
+
+The ten backups are in `database-104905/BakFile`: `RohanCode`, `RohanGame`, `RohanMall`, `RohanManage`, `RohanPoint`, `RohanStat`, `RohanTrade`, `RohanUser`, `RohanWeb`, and `RohanWork`.
 
 1. Start the SQL Server instance `SQLDEVELOPER`.
-2. Restore the ten matching database backups from your local `database-104905\BakFile` folder: `RohanCode`, `RohanGame`, `RohanMall`, `RohanManage`, `RohanPoint`, `RohanStat`, `RohanTrade`, `RohanUser`, `RohanWeb`, and `RohanWork`. The backups are not in this repository.
-3. Configure the SQL login you will use and make sure it has access to those databases. Do not put a real password in this public repository.
+2. Copy the `.bak` files to a folder the SQL Server service can read. For this installation, use `C:\Program Files\Microsoft SQL Server\MSSQL16.SQLDEVELOPER\MSSQL\Backup\Rohan` (create the `Rohan` folder if needed).
+3. In SQL Server Management Studio, connect to `.\SQLDEVELOPER`.
+4. In Object Explorer, right-click **Databases** and choose **Restore Database…**.
+5. Under **Source**, choose **Device**, click the browse button, then **Add** and select one `.bak` file.
+6. Confirm the destination database name matches the backup name. On the **Files** page, use **Relocate all files to folder** or select valid data/log folders if the backup refers to paths from another computer.
+7. Click **OK** to restore. Repeat steps 4–7 for each of the ten backups.
+8. If a database with the same name already exists, do not overwrite it unless you intend to replace its contents; back it up first.
+
+The `database-104905/SQL2008` folder also contains older SQL scripts. `Restore-database.cmd` runs those `.sql` scripts; it is not the procedure for restoring the `.bak` files. `database-104905/del-database.cmd` drops all ten databases—**do not run it** unless you intend to delete them. The batch files use `CHANGE_ME` instead of a real SQL password.
 
 ### 3. Fill in local connection settings
 
@@ -64,4 +73,3 @@ MapID needs DBServer and LogServer to be reachable. If MapID logs `Can't Connect
 ## Local-only security notes
 
 The registration CAPTCHA and SMS verification were changed for this local setup. Do not expose this website or server to the public internet in this state. Restore appropriate account protections, review the SQL permissions, and use unique credentials before hosting for other players.
-
