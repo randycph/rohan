@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* browser reset
+ * html5 support
+====================================================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+[hidden]{display:none}
+hr{-moz-box-sizing:content-box;box-sizing:content-box}
+abbr[title]{border-bottom:1px dotted}
+address,em{font-style:normal}
+b,strong{font-weight:700}
+dfn{font-style:italic}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub{bottom:-.25em;font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;top:-.5em}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:none}
+legend{display:none}
+input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+a{text-decoration:none}
+a:active,a:hover{outline:0}
+img{border:0;max-width:100%;max-height:100%;}
+li{list-style-type:none}
+table{border-collapse:collapse;border-spacing:0}
+html{height:100%;overflow-y:scroll;font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{height:100%;word-break:break-all;word-wrap:break-word;}
+.blind{overflow:hidden;visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.tcw{color:#ae00ff}
+.tcwm{color:#54b02f}
+.tcr{color:#f10}
+.tcb{color:#03f}
+.tcy{color:#fc0}
+.tcg{color:#090}
+.tc{text-align:center!important}
+.tl{text-align:left!important}
+.tr{text-align:right!important}
+.fl{float:left}
+.fr{float:right}
+.clr{clear:both!important}
+.clr:after{content:'';display:block;clear:both}
+
+/* default
+====================================================================*/
+body{font:14px/1.7 Arial,"メイリオ","Meirio","ＭＳ Ｐゴシック","MS PGothic","Osaka","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Sans-Serif;}

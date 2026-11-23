@@ -1,0 +1,57 @@
+/*Reset*/
+
+div#channel_btm dl.channel_copyright	{padding-top:25px;}
+div#channel_top1	{}
+h3.title	{font-family:Arial; font-size:40px; font-weight:normal; color:white; margin-top:-3px; padding-bottom:30px;}
+div#channel_top2 span.txt_alarm	{color:#b40000; font-family:Verdana; font-size:12px; font-weight:bold; text-align:left;}
+
+//div#channel_top2	{padding-top:7px; height:27px; font-family:Verdana;}
+
+/**/
+div#signup_area	{float:left; width:835px; border:10px solid #1e1e1e; background:#171717; padding:30px;}
+ul.regist_input1	{float:left; width:510px;}
+ul.regist_input1 li	{float:left; position:relative; vertical-align:top; /*font-size:1px;*/ padding-top:6px; padding-bottom:8px;}
+ul.regist_input1 li.size1	{width:255px;}
+ul.regist_input1 li.size2	{width:510px;}
+ul.regist_input1 .pass1	{background:url('../images/password.jpg') no-repeat;}
+//ul.regist_input1 .wrongpass1	{background:url('../images/wrongpassword.jpg') no-repeat;}
+ul.regist_input1 .pass2	{background:url('../images/repassword.jpg') no-repeat;}
+
+ul.regist_input2	{float:right; width:320px; padding-top:5px;}
+ul.regist_input2 li.agree	{padding:10px 5px; color:white; }
+
+/*Input*/
+div#ContentArea input.size90	{width:80px;}
+div#ContentArea input.size100	{width:100px; margin-right:5px; padding-left:20px;}
+div#ContentArea input.size_s	{padding-left:20px;}
+div#ContentArea input.size_b	{padding-left:20px;}
+/*Icon*/
+span.help	{margin-top:5px;}
+
+ul.regist_input1 span.input_icon	{display:inline-block; position:absolute; width:22px; height:25px;}
+ul.regist_input1 span.name	{background:url('../images/input_name.gif') no-repeat;}
+ul.regist_input1 span.birth	{background:url('../images/input_birthday.gif') no-repeat;}
+ul.regist_input1 span.id	{background:url('../images/input_id.gif') no-repeat;}
+ul.regist_input1 span.nick	{background:url('../images/input_nickname.gif') no-repeat;}
+ul.regist_input1 span.pw1	{background:url('../images/input_pw1.gif') no-repeat;}
+ul.regist_input1 span.pw2	{background:url('../images/input_pw2.gif') no-repeat;}
+ul.regist_input1 span.email	{background:url('../images/input_email.gif') no-repeat;}
+ul.regist_input1 span.que	{background:url('../images/input_question.gif') no-repeat; z-index:99 !important;}
+ul.regist_input1 span.answer{background:url('../images/input_answer.gif') no-repeat;}
+
+
+/*txt style*/
+div#signup_area p	{font-size:14px; font-weight:bold; color:#777777; line-height:22px;}
+div#signup_area01 p	{font-size:14px; font-weight:bold; color:#777777; line-height:22px; text-align:center; margin-top: 30px;}
+div#signup_area p span.txt_emphasis	{font-size:14px;}
+
+div.btn_regi	{float:right; background:url('../images/btn_register.gif') no-repeat; width:320px; height:70px; margin-top:10px; text-align:center;}
+div.btn_regi span.btn_register	{display:inline-block; width:300px; height:70px; padding-left:20px; font-family:Times New Roman; font-size:28px; line-height:70px; color:white; cursor:pointer;}
+
+div.steps	{width:915px; background:url('../images/steps_bg.gif') no-repeat left 15px; padding-bottom:20px; zoom:1;}
+div.steps:after	{content: "."; clear:both; display:block; height:0; visibility:hidden;}
+div.steps dl	{margin:0 auto; width:720px; font-family:Times New Roman; font-size:18px; font-weight:bold; color:#444444; text-align:center;}
+div.steps dt	{float:left; width:240px; height:40px; line-height:40px; color:#333333; background:url('../images/steps_off_bg.gif') no-repeat center;}
+div.steps dt.on	{color:white; background:url('../images/steps_on_bg.gif') no-repeat center;}
+div.steps dd	{float:left; width:240px; line-height:15px;}
+div.steps dd.on	{color:#b40000;}
